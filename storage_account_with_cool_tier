@@ -1,0 +1,12 @@
+#Deploy a storage account with cool tier using Powershell
+New-AzureRmStorageAccount -ResourceGroupName Armkey -Name mystorageacc8 -Location eastus -SkuName Standard_LRS -Kind BlobStorage -AccessTier Cool
+
+PS C:\Users\gajanan.kotpelliwar> New-AzureRmStorageAccount -ResourceGroupName Armkey -Name mystorageacc8 -Location eastus -SkuName Standard_LRS -Kind BlobStorage -AccessTier Cool
+
+StorageAccountName ResourceGroupName Location SkuName     Kind        AccessTier CreationTime        ProvisioningState EnableHttpsTrafficOnly
+------------------ ----------------- -------- -------     ----        ---------- ------------        ----------------- ----------------------
+mystorageacc8      Armkey            eastus   StandardLRS BlobStorage Cool       07-04-2020 10:11:41 Succeeded         False                 
+
+
+
+PS C:\Users\gajanan.kotpelliwar> 
