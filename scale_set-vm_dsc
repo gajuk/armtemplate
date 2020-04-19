@@ -2,27 +2,17 @@
 
 powershell DSC script
 ==========================
-
-Configuration demodeployment
+Configuration IIS
 {
-Import-DscResource -Module xPSDesiredStateConfiguration
-
-Import-DscResource -Module xWebAdministration
-
-Node localhost {
-
-WindowsFeature IIS
-
-{
-
-    Ensure = 'Present'
-
-    Name = 'Web-Server'
-
-}
-
-}
-
+   Node ("localhost")
+   {
+       WindowsFeature WebServer
+       {
+           Ensure = "Present"
+           Name = "web-server"
+           IncludeAllSubFeature = $true
+       }
+   }
 }
 
 
